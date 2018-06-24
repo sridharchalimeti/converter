@@ -2,8 +2,6 @@ import { constants } from "../util/constants";
 import { numberNames} from "../staticdata/number-names";
 import { tenNames } from "../staticdata/ten-names";
 
-const ZERO = 0;
-const MAX_NUM = 999999999;
 export function convertNumberToWords(number) {
     if(number === constants.ZERO){
         return 'Zero'
