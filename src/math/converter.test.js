@@ -8,7 +8,7 @@ describe('Converter functional tests', () =>  {
       expect( convertNumberToWords()).toBe('Please enter valid number');
    });
    test('Should return appropriate message if the input variable is a decimal value number', () => {
-       expect( convertNumberToWords(99.99)).toBe('Please enter non decimal number');
+       expect( convertNumberToWords(99.99)).toBe('Please enter a non decimal number');
    });
 
     test('Should allow only positive numbers', () => {
