@@ -49,4 +49,12 @@ describe('Converter functional tests', () =>  {
         expect( convertNumberToWords(99999999)).toBe('ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine');
         expect( convertNumberToWords(999999999)).toBe('nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine');
     });
+
+    test('Should return appropriate wording for given examples in the email', () => {
+        //following scenarios taken from Chris email
+        expect( convertNumberToWords(1)).toBe('one');
+        expect( convertNumberToWords(21)).toBe('twenty one');
+        expect( convertNumberToWords(105)).toBe('one hundred and five');
+        expect( convertNumberToWords(56945781)).toBe('fifty six million, nine hundred and forty five thousand, seven hundred and eighty one');
+    });
 });
