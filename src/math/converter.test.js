@@ -24,7 +24,7 @@ describe('Converter functional tests', () =>  {
     });
 
     test('Should return appropriate wording for a given three digit number', () => {
-        expect( convertNumberToWords(123)).toBe('one hundred twenty three');
+        expect( convertNumberToWords(123)).toBe('one hundred and twenty three');
     });
 
     test('Should return appropriate wording for a given multiples of 10', () => {
@@ -41,11 +41,12 @@ describe('Converter functional tests', () =>  {
     test('Should return appropriate wording for a given 9 numbers', () => {
         expect( convertNumberToWords(9)).toBe('nine');
         expect( convertNumberToWords(99)).toBe('ninety nine');
-        expect( convertNumberToWords(999)).toBe('nine hundred ninety nine');
-        expect( convertNumberToWords(9999)).toBe('nine thousand nine hundred ninety nine');
-        expect( convertNumberToWords(99999)).toBe('ninety nine thousand nine hundred ninety nine');
-        expect( convertNumberToWords(999999)).toBe('nine million');
-        expect( convertNumberToWords(10000000)).toBe('ten million');
-        expect( convertNumberToWords(100000000)).toBe('one hundred million');
+        expect( convertNumberToWords(999)).toBe('nine hundred and ninety nine');
+        expect( convertNumberToWords(9999)).toBe('nine thousand, nine hundred and ninety nine');
+        expect( convertNumberToWords(99999)).toBe('ninety nine thousand, nine hundred and ninety nine');
+        expect( convertNumberToWords(999999)).toBe('nine hundred and ninety nine thousand, nine hundred and ninety nine');
+        expect( convertNumberToWords(9999999)).toBe('nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine');
+        expect( convertNumberToWords(99999999)).toBe('ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine');
+        expect( convertNumberToWords(999999999)).toBe('nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine');
     });
 });
