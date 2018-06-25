@@ -2,6 +2,11 @@ import { constants } from "../util/constants";
 import { numberNames} from "../staticdata/number-names";
 import { tenNames } from "../staticdata/ten-names";
 
+/**
+ * This is a simple Javascript method which returns equal
+ * British English word for the given number.
+ *
+ */
 export function convertNumberToWords(number) {
     if(number === constants.ZERO){
         return 'Zero'
